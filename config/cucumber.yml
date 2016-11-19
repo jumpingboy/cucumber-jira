@@ -1,0 +1,6 @@
+---
+default: --format pretty
+report: --format html --out results/test-run-<%= Time.now.strftime("%m-%d-%y--%I-%M-%S-%p") %>.html --format pretty
+regression: --tags @healthy --tags @regression
+regression-report: --tags @healthy --tags @regression --format html --out results/test-run-<%= Time.now.strftime("%m-%d-%y--%I-%M-%S-%p") %>.html --format pretty
+smoke-test: TEST_ENV=prod --tags @smoke-test --tags @healthy
